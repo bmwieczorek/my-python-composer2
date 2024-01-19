@@ -1,4 +1,4 @@
-# python3 src/main/python/my_bq_ops.py
+# python3 src/main/python/my_gcp_ops.py
 # Intellij File/Project Structure/Project Settings/Modules/Right click on maven module/Add/Python
 # folder python right click Mark directory as Source Root
 
@@ -9,9 +9,11 @@ BUCKET = ''
 
 
 def main():
-    print("Hello World!")
+    from utils.my_util import one
+    print(one())
     my_python_bq_load_files_from_gcs_to_bq()
     my_python_select_count()
+    my_python_list_gcs()
 
 
 def my_python_select_count():
@@ -42,6 +44,16 @@ def my_python_bq_load_files_from_gcs_to_bq():
                                      job_config=job_config)
     job.result()
     print(job.output_rows)
+
+
+def my_python_list_gcs():
+    # noinspection PyPackageRequirements
+    from google.cloud import storage
+    client = storage.Client(PROJECT)
+    bucket = storage.Bucket(client, BUCKET)
+    blobs = list(client.list_blobs(bucket))
+    print(f"Found {len(blobs)} blob(s)")
+    print(f"blobs={blobs[0:10]}")
 
 
 if __name__ == "__main__":
