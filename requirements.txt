@@ -1,2 +1,8 @@
 google-cloud-bigquery
 google-cloud-storage
+google-cloud-dataflow-client
+
+jupyter
+pandas
+pandas_gbq==0.19.2
+matplotlib
