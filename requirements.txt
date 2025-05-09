@@ -6,3 +6,5 @@ jupyter
 pandas
 pandas_gbq==0.19.2
 matplotlib
+my_package
+pytest

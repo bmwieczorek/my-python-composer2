@@ -2,17 +2,22 @@
 # Intellij File/Project Structure/Project Settings/Modules/Right click on maven module/Add/Python
 # folder python right click Mark directory as Source Root
 
-PROJECT = ''
+import os
+from my_package import my_add
+PROJECT = os.getenv("GCP_PROJECT")
+OWNER = os.getenv("GCP_OWNER")
 DATASET = ''
 TABLE = ''
-BUCKET = ''
+BUCKET = f"{PROJECT}-{OWNER}"
 
 
 def main():
     from utils.my_util import one
     print(one())
-    my_python_bq_load_files_from_gcs_to_bq()
-    my_python_select_count()
+    print(my_add(1, 4))
+    print(f"{PROJECT}, {OWNER}, {BUCKET}")
+#    my_python_bq_load_files_from_gcs_to_bq()
+#    my_python_select_count()
     my_python_list_gcs()
 
 
