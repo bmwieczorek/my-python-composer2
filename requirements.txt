@@ -6,5 +6,11 @@ jupyter
 pandas
 pandas_gbq==0.19.2
 matplotlib
-my_package
+my-package
 pytest
+
+pendulum
+apache-airflow
+apache-beam[interactive]
+apache-beam[gcp]
+apache-airflow-providers-google
