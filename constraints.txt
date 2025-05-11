@@ -1,5 +1,6 @@
 # https://cloud.google.com/composer/docs/concepts/versioning/composer-versions
 # composer-2.4.3-airflow-2.5.3-python-3.8.12
+# packages without versions due to conflicts when installing apache-beam[gcp]
 absl-py==1.4.0
 agate==1.6.3
 aiodebug==2.3.0
@@ -102,7 +103,8 @@ gcsfs==2023.9.0
 google-ads==21.3.0
 google-api-core==2.11.1
 google-api-python-client==2.98.0
-google-apitools==0.5.32
+#google-apitools==0.5.32
+google-apitools
 google-auth==2.17.0
 google-auth-httplib2==0.1.0
 google-auth-oauthlib==1.0.0
@@ -145,7 +147,8 @@ google-cloud-org-policy==1.8.2
 google-cloud-os-config==1.15.2
 google-cloud-os-login==2.10.0
 google-cloud-pubsub==2.18.3
-google-cloud-pubsublite==0.6.1
+#google-cloud-pubsublite==0.6.1
+google-cloud-pubsublite
 google-cloud-redis==2.13.1
 google-cloud-resource-manager==1.10.3
 google-cloud-run==0.9.1
