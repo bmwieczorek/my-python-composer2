@@ -11,6 +11,10 @@ pyenv install 3.8.14
 pyenv virtualenv 3.8.14 composer2
 pyenv activate composer2
 
+# https://cloud.google.com/composer/docs/concepts/versioning/composer-versions
+# composer-2.4.3-airflow-2.5.3-python-3.8.12
+# https://raw.githubusercontent.com/apache/airflow/constraints-2.5.3/constraints-3.8.txt
+
 ./pip3-install.sh
 
 #Installing collected packages: pyasn1, urllib3, six, rsa, pyasn1-modules, protobuf, packaging, idna, grpcio, google-crc32c, charset-normalizer, certifi, cachetools, requests, python-dateutil, proto-plus, googleapis-common-protos, google-resumable-media, google-auth, grpcio-status, google-api-core, google-cloud-core, google-cloud-bigquery
