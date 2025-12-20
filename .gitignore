@@ -1,3 +1,4 @@
 .idea/*
 .python-version
 src/main/python/utils/__pycache__/*
+.vscode/*
